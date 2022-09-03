@@ -1,0 +1,14 @@
+button {
+    background: blue;
+    color:white;
+    padding: 40px;
+}
+
+.essaiCSSClass {
+    border: red 4px solid;
+} 
+
+
+.italicFont {
+    font-style: italic;
+}

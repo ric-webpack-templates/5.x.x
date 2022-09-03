@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title></title>
+    <meta charset="utf-8"/>
+
+    <!-- root URL qui préfixera chaque URL ci-dessous<<<<<<<<<<<<<<<<<<<<<<< -->
+    <base href="./_build/"/> 
+
+
+    <script src="css/allCSS.bundle.js"></script>
+
+    <!--
+       REMARQUE: dans l'éventualité où j'aurais besoin que le body soit connu 
+       avant lancement de mon allJs.bundle.js, je mets en différé(defer) le chargement de ce dernier :
+    -->
+    <script defer src="js/allJS.bundle.js"></script>    
+
+
+  </head>
+  <body onload="/*alert('Body onload running : exécuté en DERNIER');*/">
+    <button class="essaiCSSClass">HELLO button</button><br>
+    <label id="myLabel" class="myLabelStyle">my LABEL</label> 
+  </body>
+</html>
+
