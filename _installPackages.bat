@@ -15,6 +15,5 @@ REM Plugin permettant que la rubrique "paths:" du tsconfig.json, soit bien prise
 call npm i -D tsconfig-paths-webpack-plugin
 
 REM Pour les styles
-call npm i -D mini-css-extract-plugin
 call npm i -D css-loader
 call npm i -D style-loader
