@@ -1,4 +1,4 @@
-class MyConfiguration {
+class MyCommonConfigurationClass {
 
   getCommonConfig() {
     const oPathTool = require("path");
@@ -88,9 +88,31 @@ class MyConfiguration {
 
   }// Fin getCommonConfig()
 
+  getConfig() {
+    const oCommonConfig = this.getCommonConfig();
+    const oSpecificConfig = this.getSpecificConfig(); //Pattern Template Method(Méthode normalement abstraite ici).
+                                                      //Donc à définir par classes enfants.   
+
+    const oConfig = Object.assign(oCommonConfig, oSpecificConfig);
+
+    console.log("\n-- CONFIGURATION -- ");
+    console.log(oConfig);
+    console.log(`\n\n`);    
+
+    return oConfig;
+  }
+  
+  static getCompleteConfig(configurationClass, webPackEnvironmentVars) {
+    console.log("\n-- WebPack ENV. VARS -- ");
+    console.log(webPackEnvironmentVars);
+    console.log(`\n`);
+
+    const oMyConfiguration = new configurationClass(webPackEnvironmentVars);
+    const oCompleteConfig = oMyConfiguration.getConfig(); 
+
+    return oCompleteConfig;
+  }
+
 }
 
-const oMyConfiguration = new MyConfiguration();
-const oCommonConfig = oMyConfiguration.getCommonConfig();
-
-module.exports = oCommonConfig;
+module.exports = MyCommonConfigurationClass; //Afin de pouvoir en hériter...
