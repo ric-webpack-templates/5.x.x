@@ -2,7 +2,7 @@ const MyCommonConfigurationClass = require("./webpack.config.common.js");
 
 
 class MyDevConfigurationClass extends MyCommonConfigurationClass {
-    getSpecificConfig() { //@override Pattern Template Method
+    getSpecificConfig() { //Pattern Template Method
         const oDevConfig = {
             mode: "development"    //REM.: Si on commente cette ligne ce sera "production" par défaut, et donc le bundle de sortie sera illisible/minifié (sur une ligne).
         };

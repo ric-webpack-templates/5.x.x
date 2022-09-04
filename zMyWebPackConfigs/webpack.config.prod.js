@@ -2,7 +2,7 @@ const MyCommonConfigurationClass = require("./webpack.config.common.js");
 
 
 class MyProdConfigurationClass extends MyCommonConfigurationClass {
-    getSpecificConfig() { //@override (Pattern Template Method)
+    getSpecificConfig() { //Pattern Template Method
         const oProdConfig = {
             mode: "production"
         };
