@@ -36,16 +36,12 @@ class MyConfiguration {
   }  
 
   getDevModeConfigComplement() {
-    const retour = {
-      mode: "development"    //REM.: Si on commente cette ligne ce sera "production" par défaut, et donc le bundle de sortie sera illisible/minifié (sur une ligne).
-    };
-    return retour;   
+    const oMyDevConfig = require("./webpack.config.dev.js");
+    return oMyDevConfig;   
   }
   getProdModeConfigComplement() {
-    const retour = {
-      mode: "production"
-    };
-    return retour;   
+    const oMyProdConfig = require("./webpack.config.prod.js");
+    return oMyProdConfig;     
   }  
 }
 
