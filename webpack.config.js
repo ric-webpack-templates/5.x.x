@@ -38,7 +38,7 @@ const oConfig = {
       path: oPathTool.resolve(__dirname, `./_build`)        
       ,filename: "[id].bundle.js"  //[id]  = valeur de chacune des clefs de l'objet entry ci-dessus.
                                     // Génèrera donc ces bundles :
-                                    //   ./_build/allJS.bundle.js
+                                    //   ./_build/js/allJS.bundle.js
                                     //   ./_build/css/allCSS.bundle.js //<<< Ok il suffira de l'inclure dans index.html via <script src="...">
   }
 
