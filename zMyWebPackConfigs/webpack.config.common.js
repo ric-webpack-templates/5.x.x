@@ -35,11 +35,11 @@ class MyCommonConfigurationClass {
     
       }
       ,output: {
-          path: oPathTool.resolve(__dirname, `./_build`)        
+          path: oPathTool.resolve(__dirname, `./../_build`)        
           ,filename: "[name].bundle.js" //[name]  = valeur de chacune des clefs de l'objet entry ci-dessus.
                                         // Génèrera donc ces bundles :
-                                        //   ./_build/js/allJS.bundle.js
-                                        //   ./_build/css/allCSS.bundle.js //<<< Ok il suffira de l'inclure dans index.html via <script src="...">
+                                        //   ./../_build/js/allJS.bundle.js
+                                        //   ./../_build/css/allCSS.bundle.js //<<< Ok il suffira de l'inclure dans index.html via <script src="...">
       }
     
     
