@@ -6,7 +6,8 @@
   "description": "",
   "scripts": {
     "build": "webpack --progress --profile --watch ",
-    "b": "npm run build"
+    "b": "npm run build -- --env IS_MODE_DEV=true",
+    "bp": "npm run build"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
